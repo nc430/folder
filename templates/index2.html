@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+    <ul>
+        {% for row in data_list %}
+            <li>{{ row.id }} - {{ row.number }}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <ul class="pagination pagination-sm">
+        {{ obj.page_str|safe }}
+    </ul>
+</body>
+</html>
